@@ -39,4 +39,25 @@ findModulus(6, 10);
 //Practice with Functions - 5
 /*
 Create a JavaScript function that accepts a certain amount of numbers as parameters. Those numbers should be collected using a prompt and the numbers should be delimited by commas. Once the values are collected, find the sum of all of the numbers combined. You will need to use a function, loop, arguments object, and several type conversion global functions to accomplish this task.
+
+
+
+function findSum() {
+    "use strict";
+    var i;
+    var sumIt = 0;
+    for (i = 0; i < arguments.length; i += 1) {
+        sumIt = sumIt + arguments[i];
+    }
+    return sumIt;
+}
+window.console.log(findSum(1, 123, 500, 115, 44, 88));
 */
+//The Fortune Teller
+function tellFortune(nChild, strPart, strLoc, strJob) {
+    "use strict";
+    window.console.log("You will be a " + strJob + " in " + strLoc + ", and married to " + strPart + " with " + nChild + " kids.");
+}
+tellFortune(3, "Astrid Numero", "Hollywood", "cook");
+tellFortune(0, "May Bell", "space", "astronaut");
+tellFortune(1, "Sandra Dee", "Anywhere", "realestate developer");
