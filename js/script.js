@@ -52,7 +52,7 @@ function findSum() {
     return sumIt;
 }
 window.console.log(findSum(1, 123, 500, 115, 44, 88));
-*/
+
 //The Fortune Teller
 function tellFortune(nChild, strPart, strLoc, strJob) {
     "use strict";
@@ -61,3 +61,15 @@ function tellFortune(nChild, strPart, strLoc, strJob) {
 tellFortune(3, "Astrid Numero", "Hollywood", "cook");
 tellFortune(0, "May Bell", "space", "astronaut");
 tellFortune(1, "Sandra Dee", "Anywhere", "realestate developer");
+*/
+
+//The Rock, Paper, Scissors Game
+function theRPSGame() {
+    "use strict";
+    //Part 1 - User Selection
+    //
+    //Part 2 - Computer's choice
+    //
+    //Part 3 - Deetermination
+    //
+}
