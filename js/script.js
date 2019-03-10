@@ -26,7 +26,7 @@ function percentOf(nPercent, nOf) {
     return numOut;
 }
 percentOf(25, 200);
-*/
+
 //Practice with Functions - 4
 function findModulus(num1, num2) {
     "use strict";
@@ -35,3 +35,8 @@ function findModulus(num1, num2) {
     return numOut;
 }
 findModulus(6, 10);
+*/
+//Practice with Functions - 5
+/*
+Create a JavaScript function that accepts a certain amount of numbers as parameters. Those numbers should be collected using a prompt and the numbers should be delimited by commas. Once the values are collected, find the sum of all of the numbers combined. You will need to use a function, loop, arguments object, and several type conversion global functions to accomplish this task.
+*/
