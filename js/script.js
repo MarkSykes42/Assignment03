@@ -114,13 +114,40 @@ if (strSel === "rock") {
 }
 window.alert(strOutcome + "! You chose " + strSel + " and your opponent chose " + strOpponent);
 */
-//The Basic Calculator 
+//The Basic Calculator
+var num1;
+var num2;
+var strOper;
+// Math Function
+function mathStuff(numA, numB, mathAct) {
+    "use strict";
+    switch(mathAct) {
+        case "add":
+            return (numA + numB);
+            break;
+        case "multiply":
+            return (numA * numB);
+            break;
+        case "subtract":
+            return (numA - numB);
+            break;
+        case "divide":
+            return (numA / numB);
+            break;
+        default:
+            window.console.log("Invalid math action requested: " + mathAct);
+    }
+}
+//Main Logic
 do {
-    var num1 = parseFloat(window.prompt("Enter your first number"), 10);
-} while (num1 === NaN);
+    do {
+        num1 = parseFloat(window.prompt("Enter your first number"), 10);
+    } while (num1 === NaN);
 
-do {
-    var num2 = parseFloat(window.prompt("Enter your second number"), 10);
-} while (num1 === NaN);
+    do {
+        num2 = parseFloat(window.prompt("Enter your second number"), 10);
+    } while (num2 === NaN);
+    strOper = window.prompt("Enter either add, subtract, multiply, or divide");
+} while (strOper !== "add" && strOper !== "subtract" && strOper !== "multiply" && strOper !== "divide");
 
-window.console.log(num1 + " " + num2);
+window.alert("Your answer is " + mathStuff(num1, num2, strOper));
