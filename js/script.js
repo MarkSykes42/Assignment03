@@ -61,15 +61,66 @@ function tellFortune(nChild, strPart, strLoc, strJob) {
 tellFortune(3, "Astrid Numero", "Hollywood", "cook");
 tellFortune(0, "May Bell", "space", "astronaut");
 tellFortune(1, "Sandra Dee", "Anywhere", "realestate developer");
-*/
+
 
 //The Rock, Paper, Scissors Game
-function theRPSGame() {
-    "use strict";
-    //Part 1 - User Selection
-    //
-    //Part 2 - Computer's choice
-    //
-    //Part 3 - Deetermination
-    //
+//Part 1 - User Selection
+
+var strSel;
+do {
+    //prompt the user for their choice
+    strSel = prompt("Enter rock, paper, or scissors?");
+} while (strSel !== "rock" && strSel !== "paper" && strSel !== "scissors");
+
+//Part 2 - Computer's choice
+//there will be 3 options
+var numOpponent = Math.floor(Math.random() * 3) + 1;
+var strOpponent;
+switch(numOpponent) {
+  case 1:
+    strOpponent = "rock";
+    break;
+  case 2:
+    strOpponent = "paper";
+    break;
+  case 3:
+    strOpponent = "scissors";
+    break;
+  default:
+    window.console.log("Big boo-boo in switch statement");
 }
+
+//Part 3 - Determination
+//
+var strOutcome = "DRAW";  //pretend it's a match until proven otherwise
+if (strSel === "rock") {
+    if (strOpponent === "scissors") {
+        strOutcome = "WIN";
+    } else if (strOpponent === "paper") {
+        strOutcome = "LOSE";
+    }
+} else if (strSel === "paper") {
+    if (strOpponent === "rock") {
+        strOutcome = "WIN";
+    } else if (strOpponent === "scissors") {
+        strOutcome = "LOSE";
+    }
+} else if (strSel === "scissors") {
+    if (strOpponent === "paper") {
+        strOutcome = "WIN";
+    } else if (strOpponent === "rock") {
+        strOutcome === "LOSE";
+    }
+}
+window.alert(strOutcome + "! You chose " + strSel + " and your opponent chose " + strOpponent);
+*/
+//The Basic Calculator 
+do {
+    var num1 = parseFloat(window.prompt("Enter your first number"), 10);
+} while (num1 === NaN);
+
+do {
+    var num2 = parseFloat(window.prompt("Enter your second number"), 10);
+} while (num1 === NaN);
+
+window.console.log(num1 + " " + num2);
